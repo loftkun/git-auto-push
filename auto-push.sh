@@ -22,7 +22,7 @@ push () {
     git add ${TARGETS}
     #git commit -m "${MESSAGE}"
     #git commit -m "${MESSAGE}" --amend
-    git commit -m "${MESSAGE}" --amend --date="$(date)"
+    git commit -m "${MESSAGE}" --amend --date="$(env LANG=C date)"
     git push -f origin
 }
 
