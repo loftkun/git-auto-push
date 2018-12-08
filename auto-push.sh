@@ -4,7 +4,8 @@
 DIR=/Users/loft/Documents/conference/
 
 # target dir or file path
-TARGETS=2018/1122-Geeks-Who-Drink
+#TARGETS=2018/1208-osc
+TARGETS=.
 
 # interval[sec]
 INTERVAL=60
@@ -20,7 +21,8 @@ push () {
     fi
     git add ${TARGETS}
     #git commit -m "${MESSAGE}"
-    git commit -m "${MESSAGE}" --amend
+    #git commit -m "${MESSAGE}" --amend
+    git commit -m "${MESSAGE}" --amend --date="$(date)"
     git push -f origin
 }
 
